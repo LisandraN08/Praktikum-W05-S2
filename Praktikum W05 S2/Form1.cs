@@ -44,10 +44,19 @@ namespace Praktikum_W05_S2
             lblViewOutput.Text = lBoxKoleksi.Text;
         }
 
-        private void cBoxAktif_CheckedChanged(object sender, EventArgs e)
+        private void cBoxAktif_CheckedChanged (object sender, EventArgs e)
         {
-            radioBtnMerah.Enabled = true;
-            radioBtnBiru.Enabled = true;
+            if (cBoxAktif.Checked == true)
+            {
+                radioBtnMerah.Enabled = true;
+                radioBtnBiru.Enabled = true;
+            }
+            else
+            {
+                radioBtnMerah.Enabled = false;
+                radioBtnBiru.Enabled = false;
+            }
+
         }
         private void radioBtnMerah_CheckedChanged(object sender, EventArgs e)
         {
