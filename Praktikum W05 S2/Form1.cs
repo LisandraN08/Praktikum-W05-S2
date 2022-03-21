@@ -66,8 +66,10 @@ namespace Praktikum_W05_S2
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            lBoxKoleksi.Items.Clear();
             dataInputan.Clear();
             txtBoxInputData.Clear();
+            lblViewOutput.Text = "";
             cBoxAktif.Checked = false;
         }
     }
