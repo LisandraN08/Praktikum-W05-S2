@@ -72,6 +72,7 @@ namespace Praktikum_W05_S2
         {
             dataInputan.Clear();
             txtBoxInputData.Clear();
+            cBoxAktif.Checked = false;
         }
     }
 }
