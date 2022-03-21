@@ -24,19 +24,15 @@ namespace Praktikum_W05_S2
         }
         public void btnAddData_Click(object sender, EventArgs e)
         {
-            int panjangDataTable = dataInputan.Rows.Count;
-            int status = 0;
-            for (int i = 0; i <= panjangDataTable - 1; i++)
+            if (lBoxKoleksi.Items.Contains(txtBoxInputData.Text))
             {
-                if (status!=0 && dataInputan.Rows[status][0] == dataInputan.Rows[i][0])
-                {
-                    MessageBox.Show("Input kembar");
-                }
+                MessageBox.Show("Input kembar");
             }
-            status += 1;
-            dataInputan.Rows.Add(txtBoxInputData.Text);
-            lBoxKoleksi.DataSource = dataInputan;
-            lBoxKoleksi.DisplayMember = "Inputan";
+            else
+            {
+                lBoxKoleksi.Items.Add(txtBoxInputData.Text);
+            }
+
         }
 
         private void lBoxKoleksi_SelectedIndexChanged(object sender, EventArgs e)
